@@ -11,7 +11,6 @@ const Header = () => {
                 </div>
                 <div className="right">
                     <span><img src="src\assets\icon-sun.svg" alt="sun" /></span>
-                    <span><img src="src\assets\icon-check.svg" alt="check" /></span>
                     <span><img src="src\assets\icon-moon.svg" alt="moon" /></span>
                 </div>
             </div>
