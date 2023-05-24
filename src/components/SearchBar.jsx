@@ -2,10 +2,11 @@ import React from 'react';
 
 const SearchBar = () => {
     return (
-        <div className="searchbar_list">
+        <div className="searchbar_list width-default">
             <div className="search-input-container search-job">
                 <span><img src="src\assets\icon-search.svg" alt="search icon" /></span>
                 <input className="input" type="text" placeholder="Filter by title, companies" />
+                <span></span>
             </div>
 
             <div className="search-input-container search-location">

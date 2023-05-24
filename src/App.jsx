@@ -1,20 +1,25 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
-import JobLists from './components/Jobs/JobLists';
-import SearchBar from './components/SearchBar';
-import DetailPage from './components/DetailPage';
+import Home from './components/Home';
+import JobDetails from './components/Jobs/JobDetails';
 
-const App = () => {
+
+function App() {
   return (
     <div>
-      hello world
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/jobs/:position" element={<JobDetails />} />
+      </Routes>
     </div>
   );
 };
 
 export default App;
+
 
 
 
