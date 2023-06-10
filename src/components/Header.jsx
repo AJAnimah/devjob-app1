@@ -1,12 +1,10 @@
 import React from 'react';
-import headerBackground from '../assets/bg-pattern-header.svg';
 import logoUrl from "../assets/logo.svg"
 
 const Header = () => {
     return (
         <header className="header">
-            <img src={headerBackground} alt="Header Background" className='Header-Background' />
-            <nav className="navbar width-default">
+            <div className="display-container width-default">
                 <img className="logo" src={logoUrl} alt="Devjobs logo" />
                 <div className="toggle-switch">
                     <span><img src="src\assets\icon-sun.svg" alt="sun" /></span>
@@ -16,7 +14,7 @@ const Header = () => {
                     </label>
                     <span><img src="src\assets\icon-moon.svg" alt="moon" /></span>
                 </div>
-            </nav>
+            </div>
 
 
         </header>

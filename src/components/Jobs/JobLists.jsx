@@ -7,15 +7,21 @@ const JobLists = () => {
     <div className='jobs__wrapper'>
       {jobs.map((item) => (
         <div className="job__item" key={item.id}>
-          <img src={item.logo} alt="" />
-          <div className="job__content">
-            <h5>{item.postedAt} - {item.contract}</h5>
-            <h2><Link to={`/jobs/${item.position}`}>{item.position}</Link></h2>
-            <p>{item.company}</p>
-            <div className="location">
-              <p> <span>{item.location}</span> </p>
+          <Link to={`/jobs/${item.position}`}>
+            <div className="card">
+              <div className="company-logo" style={{ backgroundColor: item.logoBackground }}>
+                <img
+                  className="company-logo-img"
+                  src={`/${item.logo}`}
+                  alt={`${item.company} company logo`}
+                />
+              </div>
+              <p className="job__content">{item.postedAt} - {item.contract}</p>
+              <p className="card-title">{item.position}</p>
+              <p>{item.company}</p>
+              <h5 className="card-location">{item.location}</h5>
             </div>
-          </div>
+          </Link>
         </div>
       ))}
     </div>
@@ -23,5 +29,3 @@ const JobLists = () => {
 };
 
 export default JobLists;
-
-
